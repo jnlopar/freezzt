@@ -385,7 +385,7 @@ void AbstractThing::interact( int old_x, int old_y, int dx, int dy )
     case ZZTEntity::Star:        handleStar(ent, old_x, old_y, dx, dy); break;
     case ZZTEntity::Bullet:      handleBullet(ent, old_x, old_y, dx, dy); break;
     case ZZTEntity::Water:       handleWater(ent, old_x, old_y, dx, dy); break;
-    case ZZTEntity::InvisibleWall:  handleIvisibleWall(ent, old_x, old_y, dx, dy); break;
+    case ZZTEntity::InvisibleWall:  handleInvisibleWall(ent, old_x, old_y, dx, dy); break;
     case ZZTEntity::Transporter: handleTransporter(ent, old_x, old_y, dx, dy); break;
     case ZZTEntity::HorizontalBlinkWallRay:  handleHorizontalBlinkWallRay(ent, old_x, old_y, dx, dy); break;
     case ZZTEntity::Bear:        handleBear(ent, old_x, old_y, dx, dy); break;
