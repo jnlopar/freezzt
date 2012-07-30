@@ -578,13 +578,24 @@ void GameWorld::doCheat( const ZString &code )
   ZString c = code.upper();
   zdebug() << "CHEAT:" << c;
 
-  if ( c == "ammo" ) { setCurrentAmmo( currentAmmo() + 5 ); }
-  else if ( c == "health" ) { setCurrentHealth( currentHealth() + 10 ); }
-  else if ( c == "gems" ) { setCurrentGems( currentGems() + 5 ); }
-  else if ( c == "torches" ) { setCurrentTorches( currentTorches() + 5 ); }
-  else if ( c == "keys" ) {
+  if ( c == "AMMO" ) { setCurrentAmmo( currentAmmo() + 5 ); }
+  else if ( c == "HEALTH" ) { setCurrentHealth( currentHealth() + 10 ); }
+  else if ( c == "GEMS" ) { setCurrentGems( currentGems() + 5 ); }
+  else if ( c == "TORCHES" ) { setCurrentTorches( currentTorches() + 5 ); }
+  else if ( c == "KEYS" ) {
     for ( int i = GameWorld::BLUE_DOORKEY; i <= GameWorld::WHITE_DOORKEY; i++ ) {
       addDoorKey(i);
+    }
+  }
+  else if ( c == "ZAP" ) {
+    if(d->currentBoard) {
+      int x = d->currentBoard->player()->xPos();
+      int y = d->currentBoard->player()->yPos();
+
+      for(int i=-1; i <= 1; i+= 2) {
+        d->currentBoard->clearEntity(x+i, y);
+        d->currentBoard->clearEntity(x, y+i);
+      }
     }
   }
 }
