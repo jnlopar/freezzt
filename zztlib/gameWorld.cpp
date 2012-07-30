@@ -598,13 +598,16 @@ void GameWorld::doCheat( const ZString &code )
       }
     }
   }
+  else if ( c == "DARK" ) {
+    d->currentBoard->setDark(true);
+  }
+  else if ( c == "-DARK" ) {
+    d->currentBoard->setDark(false);
+  }
 }
 
 /*
-Clear surrounded by 4 squares     ZAP
 Debug mode (OFF)                  +DEBUG
 Debug mode (ON)                   -DEBUG
-Illuminate room                   -DARK
-Obfuscate room                    DARK
 */
 
