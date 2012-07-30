@@ -158,7 +158,7 @@ class AbstractThing
     virtual void handleStar( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
     virtual void handleBullet( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
     virtual void handleWater( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
-    virtual void handleIvisibleWall( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
+    virtual void handleInvisibleWall( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
     virtual void handleTransporter( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
     virtual void handleHorizontalBlinkWallRay( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
     virtual void handleBear( const ZZTEntity &ent, int ox, int oy, int dx, int dy ) {/* */};
